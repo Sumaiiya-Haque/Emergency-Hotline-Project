@@ -20,9 +20,9 @@
 />
   </head>
   <body class="">
-    <header class="max-w-11/12 h-auto mx-auto ">
+    <header class="sm:max-w-11/12 h-auto mx-auto ">
       <div
-        class="nav-parent flex justify-between items-center h-[100px]  bg-white"
+        class="nav-parent  sm:flex justify-between items-center h-[100px]  bg-white"
       >
         <div class="nav-left flex items-center gap-1">
           <img class="w-14" src="./assets/logo.png" alt="" />
@@ -31,7 +31,7 @@
             Service
           </h1>
         </div>
-        <div class="nav-right flex justify-end items-center gap-1 max-w-2xl">
+        <div class="nav-right   flex justify-end items-center h-auto  gap-1 max-w-2xl  ">
           <!-- btn-1 -->
           <button
             id="heart-btn"
@@ -42,19 +42,19 @@
           </button>
 <!-- btn-2 -->
           <button
-            id="coin-btn"
+            
             class="bg-green-200 flex justify-center items-center min-w-[100px] px-6 py-2 gap-2 rounded-3xl"
           >
-            <span id="heart-count" class="font-bold">0</span>
+            <span id="coin-btn" class="font-bold">0</span>
             <img class="w-5" src="./assets/coin.png" alt="" />
           </button>
           <!-- btn-3 -->
           <button
-            id="copy-count-btn"
+            
             class="bg-green-600 flex justify-center items-center min-w-[100px] px-6 py-2 gap-2 rounded-3xl"
           >
             <p class="font-bold text-white">
-              <span id="heart-count" class="font-bold">0</span> Copy
+              <span id="copy-count" class="font-bold">0</span> Copy
             </p>
           </button>
         </div>
@@ -62,7 +62,7 @@
     </header>
     <main class="bg-green-50">
       <!-- banner  -->
-        <div class="banner bg-gradient-to-r from-[#013123] via-[#006747] to-[#013223]  w-full h-auto pb-6 ">
+        <div class="banner bg-gradient-to-r from-[#013123] via-[#006747] to-[#013223] w-full h-auto pb-6 ">
 <div class="flex justify-center items-center py-6">
     <img class="w-20   " src="./assets/logo-dark.png" alt="">
 </div>
@@ -72,15 +72,17 @@
         </div>
 
         <!-- card part -->
-<div class="max-w-11/12 mx-auto grid grid-cols-12 gap-4 ">
-      <div class="card-container grid grid-cols-3 col-span-9 my-10 gap-4  ">
+<div class="sm:max-w-11/12 mx-auto grid grid-cols-12 gap-4 ">
+      <div class="card-container sm:grid grid-cols-3  col-span-9  my-10 gap-4  ">
         <!-- card 1 -->
         <div class="card  w-full h-auto  bg-white shadow p-5">
        <div class="flex justify-between items-center">
          <div class=" bg-pink-100 bg-cover p-2 rounded-[10px]">
 <img class="max-w-[30px]" src="./assets/emergency.png" alt="">
         </div>
-        <i class="fa-regular fa-heart text-gray-500"></i>
+        <div class="heart-icon">
+          <i  class=" fa-regular fa-heart text-gray-500"></i>
+        </div>
        </div>
        <div class="w-auto">
         <h1 class="font-bold mt-5">জাতীয় জরুরি সেবা</h1>
@@ -104,11 +106,11 @@
           <!-- call btn -->
 
           <button
-            id="call-btn"
+            id="call-btn1"
             class="w-[50%] flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-green-700 text-gray-50"
           >
           <i class="fa-solid fa-phone"></i>
-            <span id="heart-count" class="font-medium">call</span>
+            <span  class="font-medium call-icon ">call</span>
             
           </button>
 
@@ -120,7 +122,9 @@
          <div class=" bg-pink-100 bg-cover p-2 rounded-[10px]">
 <img class="max-w-[30px]" src="./assets/police.png" alt="">
         </div>
-        <i class="fa-regular fa-heart text-gray-500"></i>
+        <div class="heart-icon">
+<i class=" fa-regular fa-heart text-gray-500"></i>
+        </div>
        </div>
        <div>
         <h1 class="font-bold mt-5">পুলিশ</h1>
@@ -144,11 +148,11 @@
           <!-- call btn -->
 
           <button
-            id="call-btn"
+            id="call-btn2"
             class=" flex w-[50%] justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-green-700 text-gray-50"
           >
           <i class="fa-solid fa-phone"></i>
-            <span id="heart-count" class="font-medium">call</span>
+            <span  class="font-medium call-icon">call</span>
             
           </button>
 
@@ -160,7 +164,9 @@
          <div class=" bg-pink-100 bg-cover p-2 rounded-[10px]">
 <img class="max-w-[30px]" src="./assets/fire-service.png" alt="">
         </div>
-        <i class="fa-regular fa-heart text-gray-500"></i>
+        <div class="heart-icon">
+          <i class="fa-regular fa-heart text-gray-500"></i>
+        </div>
        </div>
        <div>
         <h1 class="font-bold mt-5">ফায়ার সার্ভিস</h1>
@@ -184,7 +190,7 @@
           <!-- call btn -->
 
           <button
-            id="call-btn"
+            id="call-btn3"
             class=" w-[50%] flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-green-700 text-gray-50"
           >
           <i class="fa-solid fa-phone"></i>
@@ -200,7 +206,9 @@
          <div class=" bg-pink-100 bg-cover p-2 rounded-[10px]">
 <img class="max-w-[30px]" src="./assets/ambulance.png" alt="">
         </div>
-        <i class="fa-regular fa-heart text-gray-500"></i>
+        <div class="heart-icon">
+          <i class="fa-regular fa-heart text-gray-500"></i>
+        </div>
        </div>
        <div>
         <h1 class="font-bold mt-5">অ্যাম্বুলেন্স</h1>
@@ -224,7 +232,7 @@
           <!-- call btn -->
 
           <button
-            id="call-btn"
+            id="call-btn4"
             class="w-[50%] flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-green-700 text-gray-50"
           >
           <i class="fa-solid fa-phone"></i>
@@ -240,7 +248,9 @@
          <div class=" bg-pink-100 bg-cover p-2 rounded-[10px]">
 <img class="max-w-[30px]" src="./assets/emergency.png" alt="">
         </div>
-        <i class="fa-regular fa-heart text-gray-500"></i>
+       <div class="heart-icon">
+          <i class="fa-regular fa-heart text-gray-500"></i>
+        </div>
        </div>
        <div>
         <h1 class="font-bold mt-5">নারী ও শিশু সহায়তা</h1>
@@ -264,7 +274,7 @@
           <!-- call btn -->
 
           <button
-            id="call-btn"
+            id="call-btn5"
             class="w-[50%] flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-green-700 text-gray-50"
           >
           <i class="fa-solid fa-phone"></i>
@@ -280,7 +290,9 @@
          <div class=" bg-pink-100 bg-cover p-2 rounded-[10px]">
 <img class="max-w-[30px]" src="./assets/emergency.png" alt="">
         </div>
-        <i class="fa-regular fa-heart text-gray-500"></i>
+        <div class="heart-icon">
+          <i class="fa-regular fa-heart text-gray-500"></i>
+        </div>
        </div>
        <div>
         <h1 class="font-bold mt-5">দুদক</h1>
@@ -304,7 +316,7 @@
           <!-- call btn -->
 
           <button
-            id="call-btn"
+            id="call-btn6"
             class="w-[50%] flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-green-700 text-gray-50"
           >
           <i class="fa-solid fa-phone"></i>
@@ -320,7 +332,9 @@
          <div class=" bg-pink-100 bg-cover p-2 rounded-[10px]">
 <img class="max-w-[30px]" src="./assets/emergency.png" alt="">
         </div>
-        <i class="fa-regular fa-heart text-gray-500"></i>
+        <div class="heart-icon">
+          <i class="fa-regular fa-heart text-gray-500"></i>
+        </div>
        </div>
        <div>
         <h1 class="font-bold mt-5">বিদ্যুৎ বিভ্রাট</h1>
@@ -344,7 +358,7 @@
           <!-- call btn -->
 
           <button
-            id="call-btn"
+            id="call-btn7"
             class="w-[50%] flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-green-700 text-gray-50"
           >
           <i class="fa-solid fa-phone"></i>
@@ -360,7 +374,9 @@
          <div class=" bg-pink-100 bg-cover p-2 rounded-[10px]">
 <img class="max-w-[30px]" src="./assets/brac.png" alt="">
         </div>
-        <i class="fa-regular fa-heart text-gray-500"></i>
+        <div class="heart-icon">
+          <i class="fa-regular fa-heart text-gray-500"></i>
+        </div>
        </div>
        <div>
         <h1 class="font-bold mt-5">ব্র্যাক</h1>
@@ -374,7 +390,7 @@
 
     <!-- copy btn -->
 <button
-            id="copy-btn"
+            id="copy-btn8"
             class="border-2 w-[50%] border-gray-300 flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-white text-gray-600 "
           >
             <i class="fa-regular fa-copy"></i>
@@ -400,7 +416,9 @@
          <div class=" bg-pink-100 bg-cover p-2 rounded-[10px]">
 <img class="max-w-[30px]" src="./assets/emergency.png" alt="">
         </div>
-        <i class="fa-regular fa-heart text-gray-500"></i>
+        <div class="heart-icon ">
+          <i class="fa-regular fa-heart text-gray-500"></i>
+        </div>
        </div>
        <div>
         <h1 class="font-bold mt-5">বাংলাদেশ রেলওয়ে</h1>
@@ -424,7 +442,7 @@
           <!-- call btn -->
 
           <button
-            id="call-btn"
+            id="call-btn9"
             class="w-[50%] flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-green-700 text-gray-50"
           >
           <i class="fa-solid fa-phone"></i>
@@ -439,9 +457,9 @@
 
 </div>
                <!-- Call history card -->
-                        <div class="call-history mx-auto col-span-3 my-10 w-full h-auto bg-white shadow p-5">
+                        <div class="call-history mx-auto   col-span-3 my-10 w-full h-auto bg-white shadow p-5">
       <div>
-        <div class="flex justify-between items-center">
+        <div class=" lg:justify-between sm:flex justify-center items-center w-full mx-auto ">
 <div class="flex items-center gap-2">
 <div>
   <i class="fa-regular fa-clock"></i> 
@@ -461,5 +479,8 @@
     </main>
 
     <footer></footer>
+  
+  <script src="./index.js"></script>
   </body>
+
 </html>
