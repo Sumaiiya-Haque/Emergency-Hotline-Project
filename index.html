@@ -1,19 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emergency Hotline Project</title>
-</head>
-<body>
-    <header>
-
+    <!-- css cdn -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- daisy ui & tailwind cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome -->
+     <link 
+  rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+  </head>
+  <body class="">
+    <header class="max-w-11/12 h-auto mx-auto ">
+      <div
+        class="nav-parent flex justify-between items-center h-[100px]  bg-white"
+      >
+        <div class="nav-left flex items-center gap-1">
+          <img class="w-14" src="./assets/logo.png" alt="" />
+          <h1 class="  text-2xl font-extrabold text-green-700">
+            Emergency <br />
+            Service
+          </h1>
+        </div>
+        <div class="nav-right flex justify-end items-center gap-1 max-w-2xl">
+          <!-- btn-1 -->
+          <button
+            id="heart-btn"
+            class="bg-green-200 flex justify-center items-center min-w-[100px] px-6 py-2 gap-2 rounded-3xl"
+          >
+            <span id="heart-count" class="font-bold">0</span>
+            <img class="w-5" src="./assets/heart.png" alt="" />
+          </button>
+<!-- btn-2 -->
+          <button
+            id="coin-btn"
+            class="bg-green-200 flex justify-center items-center min-w-[100px] px-6 py-2 gap-2 rounded-3xl"
+          >
+            <span id="heart-count" class="font-bold">0</span>
+            <img class="w-5" src="./assets/coin.png" alt="" />
+          </button>
+          <!-- btn-3 -->
+          <button
+            id="copy-count-btn"
+            class="bg-green-600 flex justify-center items-center min-w-[100px] px-6 py-2 gap-2 rounded-3xl"
+          >
+            <p class="font-bold text-white">
+              <span id="heart-count" class="font-bold">0</span> Copy
+            </p>
+          </button>
+        </div>
+      </div>
     </header>
-    <main>
+    <main class="bg-green-50">
+      <!-- banner  -->
+        <div class="banner bg-gradient-to-r from-[#013123] via-[#006747] to-[#013223]  w-full h-auto pb-6 ">
+<div class="flex justify-center items-center py-6">
+    <img class="w-20   " src="./assets/logo-dark.png" alt="">
+</div>
+<h1 class="text-gray-50 text-3xl font-extrabold text-center pb-5">জরুরি সেবা ডিরেক্টরি</h1>
+<p class="text-center text-gray-50 font-medium">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+
+        </div>
+
+        <!-- card part -->
+<div class="max-w-11/12 mx-auto grid grid-cols-12 gap-4 ">
+      <div class="card-container grid grid-cols-3 col-span-9 my-10 gap-4  ">
+        <!-- card 1 -->
+        <div class="card  w-full h-auto  bg-white shadow p-5">
+       <div class="flex justify-between items-center">
+         <div class=" bg-pink-100 bg-cover p-2 rounded-[10px]">
+<img class="max-w-[30px]" src="./assets/emergency.png" alt="">
+        </div>
+        <i class="fa-regular fa-heart text-gray-500"></i>
+       </div>
+       <div class="w-auto">
+        <h1 class="font-bold mt-5">জাতীয় জরুরি সেবা</h1>
+        <p class="text-gray-600 font-medium">National Emergency</p>
+        <br>
+        <h1 id="sharbojonin-id" class="text-2xl font-bold">999</h1>
+        <button class="text-gray-600 font-medium bg-gray-200 rounded-[20px] px-4 py-2 text-sm">সার্বজনীন</button>
+       </div>
+
+<div class="mt-5 w-full flex gap-2">
+
+    <!-- copy btn -->
+<button
+            id="copy-btn"
+            class="border-2 w-[50%] border-gray-300 flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-white text-gray-600  "
+          >
+            <i class="fa-regular fa-copy"></i>
+            <span id="heart-count" class="font-medium">Copy</span>
+          </button>
+
+          <!-- call btn -->
+
+          <button
+            id="call-btn"
+            class="w-[50%] flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-green-700 text-gray-50"
+          >
+          <i class="fa-solid fa-phone"></i>
+            <span id="heart-count" class="font-medium">call</span>
+            
+          </button>
+
+</div>
+</div>
+<!-- card 2 -->
+          <div class="card  w-full h-auto bg-white shadow p-5">
+       <div class="flex justify-between items-center">
+         <div class=" bg-pink-100 bg-cover p-2 rounded-[10px]">
+<img class="max-w-[30px]" src="./assets/police.png" alt="">
+        </div>
+        <i class="fa-regular fa-heart text-gray-500"></i>
+       </div>
+       <div>
+        <h1 class="font-bold mt-5">পুলিশ</h1>
+        <p class="text-gray-600 font-medium">Police</p>
+        <br>
+        <h1 id="sharbojonin-id" class="text-2xl font-bold">999</h1>
+        <button class="text-gray-600 font-medium bg-gray-200 rounded-[20px] px-4 py-2 text-sm">পুলিশ</button>
+       </div>
+
+<div class="mt-5 flex gap-2">
+
+    <!-- copy btn -->
+<button
+            id="copy-btn"
+            class="border-2 w-[50%] border-gray-300 flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-white text-gray-600 "
+          >
+            <i class="fa-regular fa-copy"></i>
+            <span id="heart-count" class="font-medium">Copy</span>
+          </button>
+
+          <!-- call btn -->
+
+          <button
+            id="call-btn"
+            class=" flex w-[50%] justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-green-700 text-gray-50"
+          >
+          <i class="fa-solid fa-phone"></i>
+            <span id="heart-count" class="font-medium">call</span>
+            
+          </button>
+
+</div>
+</div>
+ <!-- card 3 -->
+          <div class="card w-full h-auto bg-white shadow p-5">
+       <div class="flex justify-between items-center">
+         <div class=" bg-pink-100 bg-cover p-2 rounded-[10px]">
+<img class="max-w-[30px]" src="./assets/fire-service.png" alt="">
+        </div>
+        <i class="fa-regular fa-heart text-gray-500"></i>
+       </div>
+       <div>
+        <h1 class="font-bold mt-5">ফায়ার সার্ভিস</h1>
+        <p class="text-gray-600 font-medium">Fire Service</p>
+        <br>
+        <h1 id="sharbojonin-id" class="text-2xl font-bold">999</h1>
+        <button class="text-gray-600 font-medium bg-gray-200 rounded-[20px] px-4 py-2 text-sm">ফায়ার</button>
+       </div>
+
+<div class="mt-5 flex gap-2">
+
+    <!-- copy btn -->
+<button
+            id="copy-btn"
+            class="border-2 w-[50%] border-gray-300 flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-white text-gray-600 "
+          >
+            <i class="fa-regular fa-copy"></i>
+            <span id="heart-count" class="font-medium">Copy</span>
+          </button>
+
+          <!-- call btn -->
+
+          <button
+            id="call-btn"
+            class=" w-[50%] flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-green-700 text-gray-50"
+          >
+          <i class="fa-solid fa-phone"></i>
+            <span id="heart-count" class="font-medium">call</span>
+            
+          </button>
+
+</div>
+</div>
+   <!-- card 4 -->
+            <div class="card  w-full h-auto bg-white shadow p-5">
+       <div class="flex justify-between items-center">
+         <div class=" bg-pink-100 bg-cover p-2 rounded-[10px]">
+<img class="max-w-[30px]" src="./assets/ambulance.png" alt="">
+        </div>
+        <i class="fa-regular fa-heart text-gray-500"></i>
+       </div>
+       <div>
+        <h1 class="font-bold mt-5">অ্যাম্বুলেন্স</h1>
+        <p class="text-gray-600 font-medium">Ambulence</p>
+        <br>
+        <h1 id="sharbojonin-id" class="text-2xl font-bold">1994-999999</h1>
+        <button class="text-gray-600 font-medium bg-gray-200 rounded-[20px] px-4 py-2 text-sm">স্বাস্থ্য</button>
+       </div>
+
+<div class="mt-5 flex gap-2">
+
+    <!-- copy btn -->
+<button
+            id="copy-btn"
+            class="border-2 w-[50%] border-gray-300 flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-white text-gray-600 "
+          >
+            <i class="fa-regular fa-copy"></i>
+            <span id="heart-count" class="font-medium">Copy</span>
+          </button>
+
+          <!-- call btn -->
+
+          <button
+            id="call-btn"
+            class="w-[50%] flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-green-700 text-gray-50"
+          >
+          <i class="fa-solid fa-phone"></i>
+            <span id="heart-count" class="font-medium">call</span>
+            
+          </button>
+
+</div>
+</div>
+     <!-- card 5 -->
+              <div class="card  w-full h-auto bg-white shadow p-5">
+       <div class="flex justify-between items-center">
+         <div class=" bg-pink-100 bg-cover p-2 rounded-[10px]">
+<img class="max-w-[30px]" src="./assets/emergency.png" alt="">
+        </div>
+        <i class="fa-regular fa-heart text-gray-500"></i>
+       </div>
+       <div>
+        <h1 class="font-bold mt-5">নারী ও শিশু সহায়তা</h1>
+        <p class="text-gray-600 font-medium">Women & Child Helpline</p>
+        <br>
+        <h1 id="sharbojonin-id" class="text-2xl font-bold">109</h1>
+        <button class="text-gray-600 font-medium bg-gray-200 rounded-[20px] px-4 py-2 text-sm">সহায়তা</button>
+       </div>
+
+<div class="mt-5 flex gap-2">
+
+    <!-- copy btn -->
+<button
+            id="copy-btn"
+            class="border-2 w-[50%] border-gray-300 flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-white text-gray-600 "
+          >
+            <i class="fa-regular fa-copy"></i>
+            <span id="heart-count" class="font-medium">Copy</span>
+          </button>
+
+          <!-- call btn -->
+
+          <button
+            id="call-btn"
+            class="w-[50%] flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-green-700 text-gray-50"
+          >
+          <i class="fa-solid fa-phone"></i>
+            <span id="heart-count" class="font-medium">call</span>
+            
+          </button>
+
+</div>
+</div>
+       <!-- card 6 -->
+                <div class="card  w-full h-auto bg-white shadow p-5">
+       <div class="flex justify-between items-center">
+         <div class=" bg-pink-100 bg-cover p-2 rounded-[10px]">
+<img class="max-w-[30px]" src="./assets/emergency.png" alt="">
+        </div>
+        <i class="fa-regular fa-heart text-gray-500"></i>
+       </div>
+       <div>
+        <h1 class="font-bold mt-5">দুদক</h1>
+        <p class="text-gray-600 font-medium">Anti Corruption</p>
+        <br>
+        <h1 id="sharbojonin-id" class="text-2xl font-bold">106</h1>
+        <button class="text-gray-600 font-medium bg-gray-200 rounded-[20px] px-4 py-2 text-sm">সরকারি</button>
+       </div>
+
+<div class="mt-5 flex gap-2">
+
+    <!-- copy btn -->
+<button
+            id="copy-btn"
+            class="border-2 w-[50%] border-gray-300 flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-white text-gray-600 "
+          >
+            <i class="fa-regular fa-copy"></i>
+            <span id="heart-count" class="font-medium">Copy</span>
+          </button>
+
+          <!-- call btn -->
+
+          <button
+            id="call-btn"
+            class="w-[50%] flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-green-700 text-gray-50"
+          >
+          <i class="fa-solid fa-phone"></i>
+            <span id="heart-count" class="font-medium">call</span>
+            
+          </button>
+
+</div>
+</div>
+         <!-- card 7 -->
+                  <div class="card w-full h-auto bg-white shadow p-5">
+       <div class="flex justify-between items-center">
+         <div class=" bg-pink-100 bg-cover p-2 rounded-[10px]">
+<img class="max-w-[30px]" src="./assets/emergency.png" alt="">
+        </div>
+        <i class="fa-regular fa-heart text-gray-500"></i>
+       </div>
+       <div>
+        <h1 class="font-bold mt-5">বিদ্যুৎ বিভ্রাট</h1>
+        <p class="text-gray-600 font-medium">Electricity Outrage</p>
+        <br>
+        <h1 id="sharbojonin-id" class="text-2xl font-bold">16216</h1>
+        <button class="text-gray-600 font-medium bg-gray-200 rounded-[20px] px-4 py-2 text-sm">বিদ্যুৎ </button>
+       </div>
+
+<div class="mt-5 flex gap-2">
+
+    <!-- copy btn -->
+<button
+            id="copy-btn"
+            class="border-2 w-[50%] border-gray-300 flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-white text-gray-600 "
+          >
+            <i class="fa-regular fa-copy"></i>
+            <span id="heart-count" class="font-medium">Copy</span>
+          </button>
+
+          <!-- call btn -->
+
+          <button
+            id="call-btn"
+            class="w-[50%] flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-green-700 text-gray-50"
+          >
+          <i class="fa-solid fa-phone"></i>
+            <span id="heart-count" class="font-medium">call</span>
+            
+          </button>
+
+</div>
+</div>
+           <!-- card 8 -->
+                    <div class="card  w-full h-auto bg-white shadow p-5">
+       <div class="flex justify-between items-center">
+         <div class=" bg-pink-100 bg-cover p-2 rounded-[10px]">
+<img class="max-w-[30px]" src="./assets/brac.png" alt="">
+        </div>
+        <i class="fa-regular fa-heart text-gray-500"></i>
+       </div>
+       <div>
+        <h1 class="font-bold mt-5">ব্র্যাক</h1>
+        <p class="text-gray-600 font-medium">Brac</p>
+        <br>
+        <h1 id="sharbojonin-id" class="text-2xl font-bold">16445</h1>
+        <button class="text-gray-600 font-medium bg-gray-200 rounded-[20px] px-4 py-2 text-sm">এনজিও</button>
+       </div>
+
+<div class="mt-5 flex gap-2">
+
+    <!-- copy btn -->
+<button
+            id="copy-btn"
+            class="border-2 w-[50%] border-gray-300 flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-white text-gray-600 "
+          >
+            <i class="fa-regular fa-copy"></i>
+            <span id="heart-count" class="font-medium">Copy</span>
+          </button>
+
+          <!-- call btn -->
+
+          <button
+            id="call-btn"
+            class="w-[50%] flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-green-700 text-gray-50"
+          >
+          <i class="fa-solid fa-phone"></i>
+            <span id="heart-count" class="font-medium">call</span>
+            
+          </button>
+
+</div>
+</div>
+             <!-- card 9 -->
+                      <div class="card  w-full h-auto bg-white shadow p-5">
+       <div class="flex justify-between items-center">
+         <div class=" bg-pink-100 bg-cover p-2 rounded-[10px]">
+<img class="max-w-[30px]" src="./assets/emergency.png" alt="">
+        </div>
+        <i class="fa-regular fa-heart text-gray-500"></i>
+       </div>
+       <div>
+        <h1 class="font-bold mt-5">বাংলাদেশ রেলওয়ে</h1>
+        <p class="text-gray-600 font-medium">Bangladesh Railway</p>
+        <br>
+        <h1 id="sharbojonin-id" class="text-2xl font-bold">163</h1>
+        <button class="text-gray-600 font-medium bg-gray-200 rounded-[20px] px-4 py-2 text-sm">পরিবহন</button>
+       </div>
+
+<div class="mt-5 flex gap-2">
+
+    <!-- copy btn -->
+<button
+            id="copy-btn"
+            class="border-2 w-[50%] border-gray-300 flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-white text-gray-600 "
+          >
+            <i class="fa-regular fa-copy"></i>
+            <span id="heart-count" class="font-medium">Copy</span>
+          </button>
+
+          <!-- call btn -->
+
+          <button
+            id="call-btn"
+            class="w-[50%] flex justify-center items-center px-8 py-1 gap-2 rounded-[5px] bg-green-700 text-gray-50"
+          >
+          <i class="fa-solid fa-phone"></i>
+            <span id="heart-count" class="font-medium">call</span>
+            
+          </button>
+
+</div>
+</div>
+
+
+
+</div>
+               <!-- Call history card -->
+                        <div class="call-history mx-auto col-span-3 my-10 w-full h-auto bg-white shadow p-5">
+      <div>
+        <div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<div>
+  <i class="fa-regular fa-clock"></i> 
+</div>
+  <h1 class="font-medium">Call History</h1>
+</div>
+        
+     <button class="bg-green-700 text-gray-50 font-medium px-5 py-2 rounded-3xl">Clear</button>    
+      </div>
+</div>
+</div>
+
+    
+
+<!-- aside part -->
 
     </main>
-    <footer>
-        
-    </footer>
-</body>
+
+    <footer></footer>
+  </body>
 </html>
