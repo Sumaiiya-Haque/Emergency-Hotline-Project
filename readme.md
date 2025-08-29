@@ -2,14 +2,20 @@ Q-1:What is the difference between getElementById, getElementsByClassName, and q
 
 Ans-1: getElementById and querySelector return a single element. getElementsByClassName  and querySelectorAll return a collection of elements.
 
+<<<<<<< HEAD
       getElementsByClassName returns a live HTMLCollection, while querySelectorAll returns a static NodeList. 
 
       getElementById and getElementsByClassName take the ID or class name directly. querySelector and querySelectorAll require the CSS selector string (e.g., including # for ID, . for class).
+=======
+ getElementsByClassName returns a live HTMLCollection, while querySelectorAll returns a static NodeList. 
+ getElementById and getElementsByClassName take the ID or class name directly. querySelector and querySelectorAll require the CSS selector string (e.g., including # for ID, . for class).
+>>>>>>> 1fc29b133ba98d6c851248783f4e69ff369313fb
 
 Q-2: How do you create and insert a new element into the DOM?
 
 Ans-2:Create new element:
 
+<<<<<<< HEAD
 ```<div id="div1">
   <p id="p1">This is a paragraph.</p>
   <p id="p2">This is another paragraph.</p>
@@ -23,6 +29,9 @@ para.appendChild(node);
 const element = document.getElementById("div1");
 element.appendChild(para);
 </script>```
+=======
+
+>>>>>>> 1fc29b133ba98d6c851248783f4e69ff369313fb
 
 Insert a new element: 
 To add the new element as the last child of the parent element, use parentElement.appendChild(newElement).
@@ -41,11 +50,15 @@ Event Listeners: If multiple event listeners are attached in the bubbling phase,
 Q-4: What is Event Delegation in JavaScript? Why is it useful?
 
 Ans-4:
+<<<<<<< HEAD
 <div>
   <span>
     <button>Click Me!</button>
   </span>
 </div>
+=======
+
+>>>>>>> 1fc29b133ba98d6c851248783f4e69ff369313fb
 Here we have a div which is a parent of a span which in turn is a parent of the button element.
 
 Due to event bubbling, when the button receives an event, say click, that event bubbles up the tree, so span and div will respectively receive the event also.
