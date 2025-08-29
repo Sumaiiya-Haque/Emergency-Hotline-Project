@@ -14,128 +14,294 @@ for (let i = 0; i < heartIcons.length; i++) {
 }
 
 
-// -------------5 no reusable function
-
-// document.getElementById('call-btn1').addEventListener('click',function(e){
-// e.preventDefault(e)
-
-// let coinCount = parseInt(document.getElementById("coin-count"));
-//   let count2 = 0
-//   let coinIcon = document.querySelectorAll(".call-icon");
-
-//   for (let i = 0; i < coinIcon.length; i++) {
-//     coinIcon[i].onclick = function() {
-//       count2 = count2 - 20;
-//       coinCount.innerText = count2;
-//     }
-// }
-
-// if(count2 <20 ){
-//   alert('Running Out of Coins')
-// }
-// else{
-//  alert('📞Calling National Emergency Service 999...')
-// }
-// }
-// )
-
 
 
 
 let callBtns = document.querySelectorAll(".call-icon");
 
 
-// for (let i = 0; i < callBtns.length; i++) {
-//   callBtns[i].addEventListener("click", function(e) {
-//     e.preventDefault();
-
-//     // if (count2 < 20) {
-//     //   alert("⚠️ Running Out of Coins");
-//     //  }
-//     //   else {
-//     //    coinCountEl.innerText = count2 -20;
-//     //   //  alert("📞 Calling National Emergency Service 999...");
-      
-//     //  }
-//    });
-// }
 
 
 // coin decrese function
+ let callHistory = []
 
 function handleCoins(){
   let coinCountEl = document.getElementById("coin-count");
 let count2 = parseInt(coinCountEl.innerText) || 0;
-   if (count2 < 20) {
+if (count2 < 20) {
       alert("⚠️ Running Out of Coins");
+      return false
      }
       else {
        coinCountEl.innerText = count2 -20;
-      //  alert("📞 Calling National Emergency Service 999...");
-      
+       return true  
      }
-}
+   }
+  
 
-function getAlertId(alert){
-  document.getElementById('call-btn1').addEventListener('click',function(){
-return alert
-})
-}
+
+
 
 
 
 document.getElementById('call-btn1').addEventListener('click',function(){
-handleCoins()
-     
+if (handleCoins()){
  alert("📞 Calling National Emergency Service 999...")
+}
+
+const data = {
+    name:'জাতীয় জরুরি সেবা',
+    num: 999,
+    date: new Date().toLocaleTimeString()
+}
+callHistory.push(data)
+
+
+
+ const callHistoryContainer = document.getElementById('call-history-container')
+   callHistoryContainer.innerText =''
+    for (let data of callHistory){
+const div = document.createElement('div')
+div.innerHTML =`
+<divid='div1' class=" min-h-[100px] mt-5 mx-8 flex justify-between items-center px-5  shadow bg-green-50">
+  <div>
+  <h1 class="font-medium">${data.name}</h1>
+  <h2 class="font-medium">${data.num}</h2>
+</div>
+<div>
+  <p class="font-medium">${data.date}</p>
+</div>
+</div>
+`
+callHistoryContainer.appendChild(div)
+    } 
+      
+
 })
 
 
 
 document.getElementById('call-btn2').addEventListener('click',function(){
-handleCoins()
+if(handleCoins()){
 alert('Calling Police 999...')
+}
+
+const data = {
+    name:'পুলিশ',
+    num: 999,
+    date: new Date().toLocaleTimeString()
+}
+callHistory.push(data)
+ const callHistoryContainer = document.getElementById('call-history-container')
+   callHistoryContainer.innerText =''
+    for (let data of callHistory){
+const div = document.createElement('div')
+div.innerHTML =`
+<div class=" min-h-[100px] mt-5 mx-8 flex justify-between items-center px-5 shadow bg-green-50">
+  <div>
+  <h1 class="font-medium">${data.name}</h1>
+  <h2 class="font-medium">${data.num}</h2>
+</div>
+<div>
+  <p class="font-medium">${data.date}</p>
+</div>
+</div>
+`
+callHistoryContainer.appendChild(div)
+    } 
 })
 
+
+// clear history button3
 document.getElementById('call-btn3').addEventListener('click',function(){
-handleCoins()
+if(handleCoins()){
 alert('Calling Fire Service 999...')
+}
+const data = {
+    name:'ফায়ার সার্ভিস',
+    num: 999,
+    date: new Date().toLocaleTimeString()
+}
+callHistory.push(data)
+
+ const callHistoryContainer = document.getElementById('call-history-container')
+   callHistoryContainer.innerText =''
+    for (let data of callHistory){
+const div = document.createElement('div')
+div.innerHTML =`
+<div class=" min-h-[100px] mt-5 mx-8 flex justify-between items-center px-5 shadow bg-green-50">
+  <div>
+  <h1 class="font-medium">${data.name}</h1>
+  <h2 class="font-medium">${data.num}</h2>
+</div>
+<div>
+  <p class="font-medium">${data.date}</p>
+</div>
+</div>
+`
+callHistoryContainer.appendChild(div)
+    } 
 })
 
 document.getElementById('call-btn4').addEventListener('click',function(){
-handleCoins()
+if(handleCoins()){
 alert('Calling Ambulence 1994-999999...')
+}
+const data = {
+    name:'অ্যাম্বুলেন্স',
+    num: '1994-999999',
+    date: new Date().toLocaleTimeString()
+}
+callHistory.push(data)
+
+ const callHistoryContainer = document.getElementById('call-history-container')
+   callHistoryContainer.innerText =''
+    for (let data of callHistory){
+const div = document.createElement('div')
+div.innerHTML =`
+<div class=" min-h-[100px] mt-5 mx-8 flex justify-between items-center px-5 shadow bg-green-50">
+  <div>
+  <h1 class="font-medium">${data.name}</h1>
+  <h2 class="font-medium">${data.num}</h2>
+</div>
+<div>
+  <p class="font-medium">${data.date}</p>
+</div>
+</div>
+`
+callHistoryContainer.appendChild(div)
+    } 
 })
 
 document.getElementById('call-btn5').addEventListener('click',function(){
-handleCoins()
+if(handleCoins()){
 alert('Calling Women & Child Helpline 109...')
+}
+const data = {
+    name:'নারী ও শিশু সহায়তা',
+    num: 109,
+    date: new Date().toLocaleTimeString()
+}
+callHistory.push(data)
+
+ const callHistoryContainer = document.getElementById('call-history-container')
+   callHistoryContainer.innerText =''
+    for (let data of callHistory){
+const div = document.createElement('div')
+div.innerHTML =`
+<div class=" min-h-[100px] mt-5 mx-8 flex justify-between items-center px-5 shadow bg-green-50">
+  <div>
+  <h1 class="font-medium">${data.name}</h1>
+  <h2 class="font-medium">${data.num}</h2>
+</div>
+<div>
+  <p class="font-medium">${data.date}</p>
+</div>
+</div>
+`
+callHistoryContainer.appendChild(div)
+    } 
 })
 
 document.getElementById('call-btn6').addEventListener('click',function(){
-handleCoins()
+if(handleCoins()){
 alert('Calling Calling Anti Corruption 106...')
+}
+
+const data = {
+    name:'দুদক',
+    num: 106,
+    date: new Date().toLocaleTimeString()
+}
+callHistory.push(data)
+
+ const callHistoryContainer = document.getElementById('call-history-container')
+   callHistoryContainer.innerText =''
+    for (let data of callHistory){
+const div = document.createElement('div')
+div.innerHTML =`
+<div class=" min-h-[100px] mt-5 mx-8 flex justify-between items-center px-5 shadow bg-green-50">
+  <div>
+  <h1 class="font-medium">${data.name}</h1>
+  <h2 class="font-medium">${data.num}</h2>
+</div>
+<div>
+  <p class="font-medium">${data.date}</p>
+</div>
+</div>
+`
+callHistoryContainer.appendChild(div)
+    } 
 })
 
-document.getElementById('call-btn7').addEventListener('click',function(){
-handleCoins()
-alert('Calling Electricity Outrage 16216...')
-})
-
-document.getElementById('call-btn8').addEventListener('click',function(){
-handleCoins()
-alert('Calling Brac 16445...')
+// clear call history
 
 
-})
-
-document.getElementById('call-btn9').addEventListener('click',function(e){
-handleCoins()
-alert('Calling Bangladesh Railway 163...')
-})
+document.getElementById("clear-history-btn").addEventListener("click", function() {
+  
+  let callList = document.getElementById("call-history-container");
+  callList.innerHTML = "";
+  callHistory = [];
+});
 
 
 
+
+
+// copy btn1
+
+  document.getElementById("copy-btn1").addEventListener("click", function() { 
+    let text = document.getElementById("national-emergency-hotline").innerText; 
+    navigator.clipboard.writeText(text).then(() => {
+      alert("✅ Copied: " + text); 
+    })  
+  });
+
+  // copy btn2
+
+ document.getElementById("copy-btn2").addEventListener("click", function() { 
+    let text = document.getElementById("national-emergency-hotline").innerText; 
+    navigator.clipboard.writeText(text).then(() => {
+      alert("✅ Copied: " + text); 
+    })  
+  });
+
+
+   // copy btn3
+
+ document.getElementById("copy-btn3").addEventListener("click", function() { 
+    let text = document.getElementById("fire-service").innerText; 
+    navigator.clipboard.writeText(text).then(() => {
+      alert("✅ Copied:" + text); 
+    })  
+  });
+
+   // copy btn4
+
+ document.getElementById("copy-btn4").addEventListener("click", function() { 
+    let text = document.getElementById("ambulence").innerText; 
+    navigator.clipboard.writeText(text).then(() => {
+      alert("✅ Copied: " + text); 
+    })  
+  });
+
+   // copy btn5
+
+ document.getElementById("copy-btn5").addEventListener("click", function() { 
+    let text = document.getElementById("women-child-helpline").innerText; 
+    navigator.clipboard.writeText(text).then(() => {
+      alert("✅ Copied: " + text); 
+    })  
+  });
+
+   // copy btn
+
+ document.getElementById("copy-btn6").addEventListener("click", function() { 
+    let text = document.getElementById("anti-corruption").innerText; 
+    navigator.clipboard.writeText(text).then(() => {
+      alert("✅ Copied Anti- Corruption Hotline Number: " + text); 
+    })  
+  });
     
 
 
