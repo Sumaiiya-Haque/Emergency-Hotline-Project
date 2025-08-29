@@ -10,19 +10,7 @@ Q-2: How do you create and insert a new element into the DOM?
 
 Ans-2:Create new element:
 
-```<div id="div1">
-  <p id="p1">This is a paragraph.</p>
-  <p id="p2">This is another paragraph.</p>
-</div>
 
-<script>
-const para = document.createElement("p");
-const node = document.createTextNode("This is new.");
-para.appendChild(node);
-
-const element = document.getElementById("div1");
-element.appendChild(para);
-</script>```
 
 Insert a new element: 
 To add the new element as the last child of the parent element, use parentElement.appendChild(newElement).
@@ -41,11 +29,7 @@ Event Listeners: If multiple event listeners are attached in the bubbling phase,
 Q-4: What is Event Delegation in JavaScript? Why is it useful?
 
 Ans-4:
-<div>
-  <span>
-    <button>Click Me!</button>
-  </span>
-</div>
+
 Here we have a div which is a parent of a span which in turn is a parent of the button element.
 
 Due to event bubbling, when the button receives an event, say click, that event bubbles up the tree, so span and div will respectively receive the event also.
