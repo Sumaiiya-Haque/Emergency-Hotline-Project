@@ -19,9 +19,6 @@ for (let i = 0; i < heartIcons.length; i++) {
 
 let callBtns = document.querySelectorAll(".call-icon");
 
-
-
-
 // coin decrese function
  let callHistory = []
 
@@ -97,7 +94,7 @@ callHistory.push(data)
     for (let data of callHistory){
 const div = document.createElement('div')
 div.innerHTML =`
-<div class=" min-h-[100px] mt-5 mx-8 flex justify-between items-center px-5 shadow bg-green-50">
+<div class=" min-h-[100px] mt-5 mx-8 px-5 flex justify-between items-center  shadow bg-green-50">
   <div>
   <h1 class="font-medium">${data.name}</h1>
   <h2 class="font-medium">${data.num}</h2>
@@ -220,7 +217,7 @@ callHistory.push(data)
     for (let data of callHistory){
 const div = document.createElement('div')
 div.innerHTML =`
-<div class=" min-h-[100px] mt-5 mx-8 flex justify-between items-center px-5 shadow bg-green-50">
+<div class=" min-h-[100px] mt-5 mx-8 px-5 flex justify-between items-center  shadow bg-green-50">
   <div>
   <h1 class="font-medium">${data.name}</h1>
   <h2 class="font-medium">${data.num}</h2>
