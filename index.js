@@ -217,7 +217,7 @@ callHistory.push(data)
     for (let data of callHistory){
 const div = document.createElement('div')
 div.innerHTML =`
-<div class=" min-h-[100px] mt-5 mx-6 px-5 flex justify-between items-center  shadow bg-green-50">
+<div class=" min-h-[100px] mt-5 mx-5 px-5 flex justify-between items-center  shadow bg-green-50">
   <div>
   <h1 class="font-medium">${data.name}</h1>
   <h2 class="font-medium">${data.num}</h2>
